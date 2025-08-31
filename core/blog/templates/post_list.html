@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Posts</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Lista de Post{% endblock %}
+
+{% block content%}
     {% for post in post_list %}
         <ul>
             <li><a href="{% url 'post-detalhado' slug=post.slug %}">{{ post.titulo }}</a></li>
             <li>{{ post.conteudo }}</li>
         </ul>
     {% endfor %}
-</body>
-</html>
+{% endblock %}

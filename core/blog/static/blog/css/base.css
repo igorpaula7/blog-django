@@ -1,0 +1,13 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primaria: #5472FF;
+    --secundaria: #BDBDBD;
+    --branco: #FFFFFF;
+    --preto: #121212;
+}

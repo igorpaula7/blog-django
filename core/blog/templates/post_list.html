@@ -1,12 +1,28 @@
 {% extends "base.html" %}
 
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/post_list.css' %}">
+{% endblock extra_css %}
+
 {% block title %}Lista de Post{% endblock %}
 
 {% block content%}
+<section class="call-to-action">
+    <h1>Bem-vindo ao ByteStories</h1>
+    <p>Onde código vira história e ideias ganham vida através da programação.</p>
+</section>
+<div>
+    <h1 class="main-tittle">Posts Recentes:</h1>
+    <hr>
     {% for post in post_list %}
-        <ul>
-            <li><a href="{% url 'post-detalhado' slug=post.slug %}">{{ post.titulo }}</a></li>
-            <li>{{ post.conteudo }}</li>
-        </ul>
+            <div class="post">
+                <h2>{{post.titulo}}</h2>
+                <h4>{{post.data_criacao}}. Postado por: {{post.autor}} </h4>
+                <p>{{post.conteudo|truncatechars:150}}</p>
+                <a href="{% url 'post-detalhado' slug=post.slug %}">Ler mais...</a>
+            </div>
     {% endfor %}
+</div>    
 {% endblock %}

@@ -1,0 +1,49 @@
+.call-to-action {
+    width: 100vw;
+    height: auto;
+    background-color: var(--primaria);
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100vw;
+}
+
+.call-to-action > h1 {
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.call-to-action > p {
+    font-size: 24px;
+    padding-bottom: 50px;
+}
+
+.post {
+    background-color: var(--branco);
+    width: 50%;
+    border: 2px solid var(--secundaria);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px 0px;
+    margin: 25px 0px 25px 50px;
+}
+
+.main-tittle {
+    padding: 25px 0px 25px 50px;
+}
+
+hr { 
+    margin-left: 50px;
+    width: 50%;
+}
+
+.post > * {
+    padding-left: 25px;
+}

@@ -1,0 +1,29 @@
+footer {
+    width: 100vw;
+    height: 100px;
+    background-color: var(--primaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > h3 {
+    color: var(--branco);
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.links > a {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+.links > a:hover {
+    color: var(--preto);
+}

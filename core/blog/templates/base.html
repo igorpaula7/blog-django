@@ -8,6 +8,7 @@
     <title>{% block title %}ByteStories{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/footer.css' %}">
     {% block extra_css %}
     {% endblock extra_css %}
 </head>
@@ -17,5 +18,7 @@
     <main>
         {% block content %}{% endblock %}
     </main>
+
+    {% include "includes/footer.html" %}
 </body>
 </html>

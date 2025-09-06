@@ -1,15 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Detalhado</title>
-</head>
-<body>
-        <ul>
-            <li>{{ post.titulo }}</li>
-            <li>{{ post.conteudo }}</li>
-            <li>{{ post.autor }}</li>
-        </ul>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/post_detail.css' %}">
+{% endblock extra_css %}
+
+{% block title %}{{ post.titulo }}{% endblock %}
+
+{% block content%}
+
+    <div class="post-detail">
+        <div class="post-title">
+            <h1>{{ post.titulo }}</h1>
+            <p class="post-info"> Postado por {{ post.autor }}, em {{ post.data_criacao }}.</p>
+        </div>
+        <div class="post-text">
+            {{ post.conteudo }} 
+        </div>
+        <form action="{% url 'lista-de-posts' %}" method="get">
+            {% csrf_token %}
+            <input type="submit" value="Voltar para a Home" class="return-button">
+        </form>
+        <div class="about-actor">
+            <h2>Sobre o Autor</h2>
+            <h4>Igor de Paula</h4>
+            <p>Desenvolvedor apaixonado por Django e tecnologias web. Compartilho conhecimento através do código.</p>
+        </div>
+    </div>
+
+{% endblock %}

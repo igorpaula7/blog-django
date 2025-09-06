@@ -1,5 +1,5 @@
 footer {
-    width: 100vw;
+    width: 100%;
     height: 100px;
     background-color: var(--primaria);
     display: flex;
@@ -10,6 +10,7 @@ footer {
 
 footer > h3 {
     color: var(--branco);
+    font-weight: normal;
 }
 
 .links {

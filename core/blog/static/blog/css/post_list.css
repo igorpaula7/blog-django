@@ -1,5 +1,4 @@
 .call-to-action {
-    width: 100vw;
     height: auto;
     background-color: var(--primaria);
     color: var(--branco);
@@ -7,10 +6,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-main {
-    width: 100vw;
 }
 
 .call-to-action > h1 {
@@ -25,7 +20,7 @@ main {
 
 .post {
     background-color: var(--branco);
-    width: 50%;
+    width: 70%;
     border: 2px solid var(--secundaria);
     border-radius: 10px;
     display: flex;
@@ -41,7 +36,7 @@ main {
 
 hr { 
     margin-left: 50px;
-    width: 50%;
+    width: 70%;
 }
 
 .post > * {

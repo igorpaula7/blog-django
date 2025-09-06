@@ -13,8 +13,14 @@
     --secundaria: #BDBDBD;
     --branco: #FFFFFF;
     --preto: #121212;
+    --cinza: rgba(136, 136, 136, 0.2);
 }
 
 body {
-    width: 100vw;
+    width: 100%;
+    background-color: var(--cinza);
+}
+
+main {
+    width: 100%;
 }
